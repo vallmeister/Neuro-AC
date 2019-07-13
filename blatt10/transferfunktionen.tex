@@ -52,7 +52,7 @@ ii. Für diesen Fall gilt für die Werte $u <0$:
 
 \noindent iii. In diesem Fall werden die Werte für $u \geq 0$ mit $\lambda$ multipliziert und dadurch breiter gestreut.
 
-\section{Teilaufgabe 4}
+\section*{Teilaufgabe 4}
 
 a) Die notwendigen Epochen belaufen sich auf:
 \begin{itemize}
@@ -67,6 +67,26 @@ a) Die notwendigen Epochen belaufen sich auf:
 \end{center}
 
 b) Für eine Lernrate von $\eta = 10$ wird der Effekt der \textit{dying ReLUs} provoziert.
+
+\section*{Teilaufgabe 5}
+a)\\
+i. Man stellt in diesem Bereich fest, dass die Aktivitäten von der ersten bis zur letzten Schicht gegen 0 konvergieren, sowie dass die Gradienten in die andere Richtung, also von der letzten zur ersten Schicht ebenfalls gegen 0 konvergieren, für alle Funktionen.\\
+\\
+ii. Wir betrachten die Aktivitäten. Nimmt man die Absolutwerte der beiden Funktionen, so stellen sich nach wenigen Schichten von der ersten zur letzten gehend betrachtet fast dieselben Werte ein. Nur die Vorzeichen sind invertiert: $ReLU$ ist negativ behaftet, während $ELU$ positiv behaftet ist.\\
+\\
+iii. Weil der $tanh$ schneller konvergiert.\\
+\\
+iv. In diesem Beispiel wird mit der $SELU$ Funktion am meisten gelernt.\\
+\\
+\\
+b)\\
+$tanh$: Beim $tanh$ konzentrieren sich die Aktivitäten im Bereich von [-0.5, 0.5] der activation und nehmen mit den Schichten beschränkt wachsend zu.\\
+\\
+$ReLU$: Bei der $ReLU$-Funktion konzentrieren sich die Netzwerk-Aktivitäten auf einen kleinen Bereich um die 0 der Aktivierungen. Bereits bei niedrigen Schichten haben wir hohe Aktivitäten und diese konvergiert recht schnell gegen das Maximum.\\
+\\
+$ELU$: Bei der $ELU$-Funktion haben wir eine ähnliche Konzentration wie beim $tanh$, nur dass die Aktivitäten mit zunehmender Schicht annähernd linear zunehmen.\\
+\\
+$SELU$: Bei der $SELU$-Funktion nimmt die Netzwerk-Aktivität mit zunehmender Schicht schnell ab. Für die Aktivierung ist bei -0.5 ein lokales Minimum. Die Funktion ist symmetrisch und hat bei -1 beziehungsweise 0 für Aktivierungen jeweils lokale Maxima.
 
 
 \end{document}
